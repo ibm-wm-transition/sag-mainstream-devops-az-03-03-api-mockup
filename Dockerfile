@@ -1,5 +1,5 @@
-ARG __from_img=azdevopspj1acr.azurecr.io/msr-1011-lean-original-recipe:Fixes_22-09-06
+ARG __base_image=azdevopspj1acr.azurecr.io/msr-1011-lean-original-recipe:Fixes_22-09-06
 # ARG __from_img used below on the final stage
-FROM ${__from_img}
+FROM ${__base_image}
 
 COPY ./code/is-packages/SagServiceMockup ${SAG_HOME}/IntegrationServer/packages/SagServiceMockup
