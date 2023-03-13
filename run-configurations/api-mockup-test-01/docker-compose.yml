@@ -28,7 +28,7 @@ services:
     #hostname: jmeter
     volumes:
       - ./scripts/jmeter:/mnt/scripts
-      - ../../test/genericGetTest-01.jmx:/tmp/suite.jmx
+      - ./jmeterProject/genericGetTest-01.jmx:/tmp/suite.jmx
     environment:
       - IS_ADMIN_PWD
       - MIN_USERS_NO
