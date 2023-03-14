@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 export SRC_CONTAINER_IMAGE_REGISTRY_URL=sagcr.azurecr.io
 export SRC_CONTAINER_IMAGE_REGISTRY_USER=''

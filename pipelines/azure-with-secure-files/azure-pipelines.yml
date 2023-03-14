@@ -28,13 +28,16 @@ jobs:
       name: SecureInfo
       displayName: 'Download secure information for images transport'
       inputs: 
-        secureFile: 'build.secrets.sh'
+        secureFile: 'cr.credentials.secret.sh'
 
     - script: ./pipelines/azure-with-secure-files/scripts/01.assureJobVariables.sh
       displayName: "Job Variables"
 
     - script: ./pipelines/azure-with-secure-files/scripts/02.prepareAgentMachine.sh
       displayName: "Prepare Agent"
+
+    - script: ./pipelines/azure-with-secure-files/scripts/03.supplementalTags.sh
+      displayName: "Azure tags"
 
     - script: ./build/01.checkPrerequisites.sh
       displayName: "Assure prerequisites"

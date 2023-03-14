@@ -16,14 +16,14 @@ betterAptGetInstall(){
     sudo apt-get -y -qq install $@
     lSuccess=$?
     if [ $lSuccess -eq 0 ]; then
-      logI ">>>>>>>>>>>>>>>> Libraries installed successfully"
+      echo ">>>>>>>>>>>>>>>> Libraries installed successfully"
     else
       lCrtRetry=$((lCrtRetry+1))
       if [ $lCrtRetry -gt $lMaxRetries ]; then
-        logE ">>>>>>>>>>>>>>>> ERROR: Could not install the required libraries after the maximum number of retries!"
+        echo ">>>>>>>>>>>>>>>> ERROR: Could not install the required libraries after the maximum number of retries!"
         return 1
       fi
-      logW ">>>>>>>>>>>>>>>> ERROR: Installation of required libraries failed with code $lSuccess. Retrying $lCrtRetry/$lMaxRetries ..."
+      echo ">>>>>>>>>>>>>>>> ERROR: Installation of required libraries failed with code $lSuccess. Retrying $lCrtRetry/$lMaxRetries ..."
       sleep 10
     fi
   done
