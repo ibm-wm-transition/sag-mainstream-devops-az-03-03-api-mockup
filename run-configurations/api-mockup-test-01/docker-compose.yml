@@ -16,7 +16,7 @@ services:
       - ./application.properties:/tmp/application.properties
     mem_reservation: 100m
     mem_limit: 400m
-    cpus: 0.5
+    cpus: 1
     environment:
       - SAG_IS_LICENSE_FILE=/tmp/license.xml
       - SAG_IS_CONFIG_PROPERTIES=/tmp/application.properties
