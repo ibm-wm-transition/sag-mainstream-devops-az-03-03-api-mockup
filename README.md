@@ -86,7 +86,11 @@ globalvariable.SagServiceMockup_mockUserPass.value=$env{SAG_SERVICE_MOCKUP_USER_
 globalvariable.SagServiceMockup_mockUserPass.isSecure=true
 ```
 
-If these variables are not passed
+If these variables are not passed, the following defaults apply
+
+- User is `mockUser`
+- Password is `mockPassword`
+
 
 ------------------------------
 
