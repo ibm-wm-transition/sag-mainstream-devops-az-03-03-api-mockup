@@ -61,6 +61,33 @@ id
 uid=1724(sagadmin) gid=1724(sagadmin) groups=1724(sagadmin)
 ```
 
+### Inject non administrator user able to call the mocks
+
+Create the following global variables:
+
+- SagServiceMockup_mockUserName
+- SagServiceMockup_mockUserPass
+
+Example using application.properties:
+
+```properties
+# Declaring the mock user
+globalvariable.SagServiceMockup_mockUserName.value=yourUserName
+globalvariable.SagServiceMockup_mockUserPass.value=yourUserPass
+globalvariable.SagServiceMockup_mockUserPass.isSecure=true
+```
+
+Example using application.properties and environment variables
+
+```properties
+# Declaring the mock user
+globalvariable.SagServiceMockup_mockUserName.value=$env{SAG_SERVICE_MOCKUP_USER_NAME}
+globalvariable.SagServiceMockup_mockUserPass.value=$env{SAG_SERVICE_MOCKUP_USER_PASS}
+globalvariable.SagServiceMockup_mockUserPass.isSecure=true
+```
+
+If these variables are not passed
+
 ------------------------------
 
 These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
