@@ -1,4 +1,6 @@
-# Software AG Mainstream DevOps Style API Mockup Service
+# MOVING - Software AG Mainstream DevOps Style API Mockup Service
+
+# This repo will be moved away from the Software AG organization
 
 This project offers:
 
